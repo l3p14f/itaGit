@@ -1,3 +1,3 @@
 # itaGit
 Student homework
-  create a git repo
+1.  create a git repo
