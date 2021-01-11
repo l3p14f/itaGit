@@ -1,0 +1,104 @@
+/*
+Prikazanu animaciju je potrebno realizovati 
+isključivo korišćenjem HTML i CSS jezika i 
+pri tome koristiti pristupe koji su obrađeni 
+u dosadašnjem toku kursa. Za realizaciju 
+prikazane animacije, potrebno je upotrebiti 
+sledeće pojmove CSS jezika:
+
+linearni gradijenti;
+filteri;
+CSS animacije;
+2D CSS transformacije;
+Pseudoelementi.
+
+Boje koje su korišćene za realizaciju 
+prikazanog primera su:
+
+na krugu - #fb5dad, #55fb9f, #b97aff;
+boja pozadine - #050210.
+
+Obratite pažnju na to da je glow iza 
+animiranog kruga sačinjen iz više boja, 
+koje prate boje kruga.
+
+Napomena: Zadatak podići na GitHub, 
+u okviru javnog repozitorijuma, 
+pa voditelju dostaviti link do takvog 
+repozitorijuma.
+*/
+
+body, html {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #060214;
+    width: 100%;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin: 0 auto;
+    left: 38%;
+    top: 29%;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.main {
+    position: relative;
+    margin: 0 auto;
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    
+}
+.main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    filter: blur(50px);
+    animation: inf-rot 1s linear infinite;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+}
+
+@keyframes inf-rot {
+     100% { transform:rotate(360deg);
+            transform-origin: center; 
+    } 
+}
+
+.second {
+    position: relative;
+    margin: 0 auto;
+    top:20px;
+    width: 260px;
+    height: 260px;
+    background-color: #050210;
+}
+
+.second::after {
+    content: '';
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background-color: #0E0A24;
+    animation: pulseC 1s linear infinite;
+}   
+
+@keyframes pulseC {
+    0% {
+        transform: scale(.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
