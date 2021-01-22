@@ -1,0 +1,104 @@
+* {
+  padding: 0px;
+}
+
+body, html {
+  margin   : 0 auto;
+  width    : 960px;
+  font-size: 1.3em;
+}
+
+h1 {
+  text-align: center;
+  font-size : 1em;
+}
+
+p {
+  font-size: .5em;
+}
+
+div {
+  font-size: 12px;
+}
+
+.wrapper {
+  display              : -ms-grid;
+  display              : grid;
+  -ms-grid-columns     : (minmax(130px, 1fr))[5];
+  grid-template-columns: repeat(5, minmax(130px, 1fr));
+  gap                  : 50px;
+  -webkit-box-align    : center;
+  -ms-flex-align       : center;
+  align-items          : center;
+  -webkit-box-pack     : justify;
+  -ms-flex-pack        : justify;
+  justify-content      : space-between;
+}
+
+.thumb {
+  position        : relative;
+  display         : -webkit-box;
+  display         : -ms-flexbox;
+  display         : flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack   : center;
+  justify-content : center;
+  background-color: #6BA2D9;
+  width           : 130px;
+  height          : 107px;
+  border-radius   : 10px;
+  overflow        : hidden;
+}
+
+.description {
+  background-color: gray;
+  background-color: #FAF7FF;
+  position        : absolute;
+  height          : 25px;
+  bottom          : 0;
+  left            : 0;
+  right           : 0;
+}
+
+img {
+  -o-object-fit: contain;
+  object-fit   : contain;
+  max-width    : 90%;
+  display      : block;
+  position     : relative;
+  top          : -11px;
+}
+
+h5 {
+  margin    : 0;
+  padding   : 0;
+  position  : relative;
+  text-align: center;
+  top       : 7px;
+  color     : #555454;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper, p {
+    -ms-grid-columns     : (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    font-size            : 2vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper, p {
+    -ms-grid-columns     : (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    font-size            : 3vw;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .wrapper, p {
+    -ms-grid-columns     : (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    font-size            : 5vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */
