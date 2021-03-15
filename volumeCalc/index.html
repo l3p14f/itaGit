@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Calc</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="content">
+        <h3>Volume Calculator</h3><br>
+        <img src="./calc.gif" alt="">
+        <div id="input">
+            <label for="Height">Height (unesite visinu)</label><br>
+            <input type="number" name="Input Height" id="inputH" >
+            <label for="Radius">Radius (unesite poluprecnik)</label>
+            <input type="number" name="Input Radius" id="inputR" >
+            <p>Calculate the volume using the formula V = r2 * π * H</p><br>
+            <button id="btn" type="submit" 
+            onclick="calcVolume()"
+            >Calculate</button>
+            <h4 id="result"></h4>
+        </div>
+    </div>
+</body>
+</html>
