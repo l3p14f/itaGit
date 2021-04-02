@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>modal-input-calculator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script>
+        // Potrebno je kreirati JavaScript program za obavljanje osnovnih računarskih operacija: sabiranja, oduzimanja, množenja i deljenja.
+        // Program je potrebno da funkcioniše na sledeći način.Korisnik unosi tri podatka: prvi broj, operaciju i drugi broj.
+        // Na osnovu unetih podataka, potrebno je detektovati koju od operacija je potrebno obaviti i zatim izvršiti računanje.
+        // Rezultat je moguće prikazati unutar HTML dokumenta ili unutar modalnog prozora za prikaz poruka.
+        // Računske operacije koje je potrebno obaviti definišu se karakterima +, -, *, /.
+        // Svaka od tri ulazne vrednosti programa može se preuzeti u zasebnom modalnom prozoru za preuzimanje vrednosti.
+        // Primer jednog korišćenja programa bi izgledao ovako:
+        // korisnik unosi 3
+        // korisnik unosi +
+        // korisnik unosi 10
+        // program emituje poruku 13
+
+
+
+        
+        // switch je iskoriscen na kreiranom operatoru za kalkulacije
+        // $ selektor input-a
+        // parsefloat parsira string u number
+        
+        let result;
+        
+        const number1 = parseFloat(prompt("Unesite Prvi Broj"));
+        const operator = prompt("Unesite Operator ( izaberite +, -, * ili / )");
+        const number2 = parseFloat(prompt("Unesite drugi broj"));
+
+        switch (operator) {
+            case "+":
+                result = number1 + number2;
+                console.log(`${number1} + ${number2} = ${result}`);
+                break;
+
+            case "-":
+                result = number1 - number2;
+                console.log(`${number1} - ${number2} = ${result}`);
+                break;
+
+            case "*":
+                result = number1 * number2;
+                console.log(`${number1} * ${number2} = ${result}`);
+                break;
+
+            case "/":
+                result = number1 / number2;
+                console.log(`${number1} / ${number2} = ${result}`);
+                break;
+
+            default:
+                console.log("neispravan operator");
+                break;
+        }
+    </script>
+</body>
+
+</html>
