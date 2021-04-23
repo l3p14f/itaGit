@@ -1,0 +1,107 @@
+/* 
+#464646 active
+#B8B8B8 inactive
+#797979 logo
+#32C186 greenbox
+#505050 h3 section
+#9B9B9B p section
+#222222 footer bck
+#111111 footer bottom */
+
+nav{
+    height: 90px;   
+}
+
+.nav-link{
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.nav-link:hover{
+    color: white !important;
+    background-color: #32C186 ;
+}
+
+
+.menu-icon{
+    height: 14px;
+    opacity: 50%;
+}
+#website-logo{
+    color: gray;
+    font-weight: 200;
+}
+
+.hero-image{
+    min-height: 100%;
+    height: 70vh;
+    background-image: url('../img/imgs/hero.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media only screen and (max-width: 600px){
+	.hero-image{
+        height: 35vh !important;
+    }
+    .display-6 {
+        margin-top: -.2rem;
+        height: 10px !important;
+    }
+    .hamburger{
+        margin-top: -1.4rem;
+    }
+    .navcontainer{
+        height: 50px;
+    }
+}
+
+.hamburger{
+    opacity: 50%;
+}
+
+.hero-text{
+    position: relative;
+    top: 75px;
+    background-color: #32C186;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+p{
+    font-size: 14px;
+    line-height: 2em;
+}
+
+h5{
+    font-weight: 600;
+    color: #505050;
+}
+
+h6{
+    font-weight: 800;
+    color: #505050;
+}
+
+.bottomborder{
+    border-bottom: 1px solid lightgray;
+    
+}
+
+footer{
+    background-color: #222222;
+}
+
+table{
+    font-weight: 500;
+    font-size: 14px;
+    color: #787878 !important;
+    border-color:  #313131 !important;
+}
+
+.copyright{
+    background-color: #111111;
+}
+
